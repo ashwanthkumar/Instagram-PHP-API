@@ -15,7 +15,7 @@
  * If you have any question, check http://mauriciocuenca.com/ for the
  * latest updates
  */
-require_once 'Instagram.php';
+require_once 'Instagram_Library.php';
 
 /**
  * Configuration params, make sure to write exactly the ones
@@ -39,5 +39,5 @@ if (isset($_SESSION['InstagramAccessToken']) && !empty($_SESSION['InstagramAcces
 }
 
 // Instantiate the API handler object
-$instagram = new Instagram($config);
+$instagram = new Instagram_Library($config);
 $instagram->openAuthorizationUrl();

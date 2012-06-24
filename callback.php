@@ -15,7 +15,7 @@
  * https://api.instagram.com/oauth/authorize/?client_id=e8d6b06f7550461e897b45b02d84c23e&redirect_uri=http://mauriciocuenca.com/qnktwit/confirm.php&response_type=code
  */
 session_start();
-require_once 'Instagram.php';
+require_once 'Instagram_Library.php';
 
 /**
  * Configuration params, make sure to write exactly the ones
@@ -29,7 +29,7 @@ $config = array(
      );
 
 // Instantiate the API handler object
-$instagram = new Instagram($config);
+$instagram = new Instagram_Library($config);
 $accessToken = $instagram->getAccessToken();
 $_SESSION['InstagramAccessToken'] = $accessToken;
 
